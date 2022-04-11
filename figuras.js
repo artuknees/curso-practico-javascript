@@ -1,4 +1,5 @@
 // Código del cuadrado.
+
 console.group("Cuadrado");
 
 const ladoCuadrado = 5;
