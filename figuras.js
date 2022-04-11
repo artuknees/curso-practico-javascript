@@ -1,4 +1,4 @@
-// Código del cuadrado.
+// Código del cuadrado
 
 console.group("Cuadrado");
 
