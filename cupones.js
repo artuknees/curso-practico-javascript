@@ -44,6 +44,10 @@ function onClickButtonPriceDiscount() {
     } else {
         const result_d = document.getElementById("Result_discount");
         result_d.innerText = "Ingresaste un cupón inválido";
+
+        const result_p = document.getElementById("Result_price");
+        result_p.innerText = ""
+
     }
 
 }
