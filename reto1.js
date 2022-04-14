@@ -2,7 +2,7 @@
 // Un triángulo isóceles posee dos lados iguales
 
 function check (lado1,lado2,lado3){
-    if (lado1 == lado2 && lado1 != lado3 || lado1 == lado3 && lado1 != lado2 || lado2 == lado3 && lado2 != lado1) {
+    if (lado1 == lado2 && lado1 != lado3 && lado1 + lado2>lado3 || lado1 == lado3 && lado1 != lado2 && lado1 + lado3 > lado2|| lado2 == lado3 && lado2 != lado1 && lado2 + lado3 > lado1) {
         return true;
     } else {
         return false;
