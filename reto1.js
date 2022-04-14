@@ -27,7 +27,7 @@ function altura (lado1,lado2,lado3){
     };
 };
 
-// Aquí interactuamos con HTML
+// Aquí interactuamos con HTML-
 function calcular_altura (){
     const input1 = document.getElementById("input_lado1");
     const lado1 = Number(input1.value);
