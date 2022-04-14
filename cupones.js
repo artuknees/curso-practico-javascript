@@ -47,7 +47,5 @@ function onClickButtonPriceDiscount() {
 
         const result_p = document.getElementById("Result_price");
         result_p.innerText = ""
-
     }
-
 }
