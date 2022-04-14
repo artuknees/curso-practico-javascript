@@ -4,36 +4,110 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <title>JavaScript course - Task 1</title>
+    <style>
+        :root {
+            --small: 14px;
+            --medium: 16px;
+            --large: 18px;
+            --flag_green: #66CC99;
+            --celestin: #00FFFF;
+            --white_blue: #E8EAF6;
+        }
+        body {
+            font-family: 'Mulish', sans-serif;
+            margin: 0;
+            width: 100%;
+            background-color: var(--white_blue);
+        }
+        .titulo {
+            font-weight: bold;
+        }
+        .titulo h1 {
+            margin-top: 0;
+        }
+        .titulo p {
+            text-align: center;
+        }
+        .screen {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 12px;
+        }
+        .container {
+            border: solid 3px var(--celestin);
+            border-radius: 8px;
+            padding: 16px;
+        }
+        .inputs {
+            border: solid 1px var(--celestin);
+            border-radius: 8px;
+            padding: 16px;
+        }
+        .inputs h2 {
+            margin-top: 0;
+            text-align: center;
+        }
+        .ingreso {
+            padding: 4px;
+            text-align: center;
+        }
+        .ingreso label {
+            font-weight: bold;
+        }
+        .ingreso input {
+            border-radius: 4px;
+            border: solid 0.5px grey;
+        }
+        .boton {
+            width: 100%;
+            border: none;
+            background-color: var(--flag_green);
+            border-radius: 8px;
+            height: 40px;
+            font-size: var(--large);
+            font-weight: bold;
+            color: white;
+            margin-top: 8px;
+        }
+    </style>
+
 </head>
 <body>
-    <header>
-        <h1>Cálculo de altura de triángulo isóceles</h1>
-        <p>Este es el primer desafío del taller del curso practico de JavaScript</p>
-    </header>
+    <div class="screen">
+        <div class="container">
+            <header class="titulo">
+                <h1>Isosceles triangle height</h1>
+                <p>JavaScript course - 1st task</p>
+            </header>
+            <section class="inputs">
+                <h2>Please enter triangle sides</h2>
+                <form action="">
+                    <div class="ingreso">
+                        <label for="input_lado1">Side 1:</label>
+                        <input id="input_lado1" type="number">
+                    </div>
+                    <div class="ingreso">
+                        <label for="input_lado2">Side 2:</label>
+                        <input id="input_lado2" type="number">
+                    </div>
+                    <div class="ingreso">
+                        <label for="input_lado3">Side 3:</label>
+                        <input id="input_lado3" type="number">
+                    </div>
+                
+                <button class="boton" type="button" onclick="calcular_altura()">Calculate height</button>
+                </form>
+            </section>
 
-    <section>
-        <h2>Altura</h2>
-        <p>Por favor, ingresá los lados de un verdadero triángulo isóceles</p>
-        <form action="">
-            <div>
-                <label for="input_lado1">Escribe cuánto mide el lado 1:</label>
-                <input id="input_lado1" type="number">
-            </div>
-            <div>
-                <label for="input_lado2">Escribe cuánto mide el lado 2:</label>
-                <input id="input_lado2" type="number">
-            </div>
-            <div>
-                <label for="input_lado3">Escribe cuánto mide el lado 3:</label>
-                <input id="input_lado3" type="number">
-            </div>
 
-            <button type="button" onclick="calcular_altura()">Calcular la altura</button>
-        </form>
-    </section>
-
-
-    <script src="./reto1.js"></script>
+            <script src="./reto1.js"></script>
+        </div>
+    </div>
 </body>
 </html>

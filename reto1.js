@@ -40,9 +40,9 @@ function calcular_altura (){
 
     if(altura(lado1,lado2,lado3)){
         const resultado = calculo(lado1,lado2,lado3);
-        alert("La altura del triángulo es " + resultado);
+        alert("Triangle height is " + resultado);
 
     } else {
-        alert("No ingresaste un triángulo isóceles")
+        alert("This is not an iscoseles triangle or sides are impossible.")
     }
 };
