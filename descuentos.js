@@ -1,3 +1,5 @@
+// comentario basico
+
 function calcular_precio_final(precio,descuento){
     const porcentaje_con_descuento = 100 - descuento;
     const precio_con_descuento = precio * (porcentaje_con_descuento/100);
