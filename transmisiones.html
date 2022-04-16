@@ -19,7 +19,9 @@
 body {
     margin: 0;
     font-family: 'Kanit', sans-serif;
-    height: 100%;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
 }
 .header {
     text-align: center;
@@ -34,22 +36,72 @@ body {
 .header h2 {
     margin-bottom: 0;
 }
-.container {
-    height: 100vh;
-}
 .comparador {
+    height: 100%;
+    width: 100%;
+    border-top: solid 2px white;
+}
+.contenedor_inputs {
     display: grid;
     grid-template-columns: 50% 50%;
     width: 100%;
     height: 100%;
+    position: absolute;
+}
+.comparador > img {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    justify-content: center;
+    opacity: .35;
 }
 .comparador .transmision_1 {
     justify-content: center;
     text-align: center;
+    font-weight: bolder;
+    font-size: var(--lg);
+    padding: 24px 0 0;
 }
 .comparador .transmision_2 {
     justify-content: center;
     text-align: center;
+    font-weight: bolder;
+    font-size: var(--lg);
+    padding: 24px 0 0;
+}
+.boton {
+    width: 50%;
+    font-size: var(--lg);
+    font-weight: bold;
+    height: 40px;
+    margin-top: 24px;
+    background-color: white;
+    border: solid 2px var(--soulbikers_blue);
+    color: var(--soulbikers_blue);
+    border-radius: 8px;
+}
+.select {
+    height: 24px;
+    font-weight: bold;
+    font-size: var(--sm);
+}
+.select:hover{
+    cursor: pointer;
+}
+.formul div{
+    padding: 8px 0 8px;
+}
+
+.boton:hover{
+    border: solid 2px white;
+    color: white;
+    border-radius: 8px;
+    background-color: var(--soulbikers_blue);
+    cursor: pointer;
+}
+.formul p {
+    width: 100%;
 }
 </style>
 <body>
@@ -60,71 +112,72 @@ body {
         </header>
 
         <section class="comparador">
+            <img src="./406eded5-6b5d-4530-ab38-b4052049507d.JPG" alt="foto">
+            <div class="contenedor_inputs">
+                <div class="transmision_1">
+                    <p>Elegí el plato y el piñon del caso N° 1</p>
+                    <form action="" class="formul">
+                        <div class="plato_1">
+                            <label for="input_plato_1">Plato:</label>
+                            <select name="plato_1" class="select" id="input_plato_1">
+                                <option value="28">28</option>
+                                <option value="30">30</option>
+                                <option value="32">32</option>
+                                <option value="34">34</option>
+                                <option value="36">36</option>
 
+                            </select>
+                        </div>
+                        <div class="piñon_1">
+                            <label for="input_piñon_1">Piñon:</label>
+                            <select name="piñon_1" class="select" id="input_piñon_1">
+                                <option value="XX1 10-50">XX1 10-50</option>
+                                <option value="XX1 10-52">XX1 10-52</option>
+                                <option value="XTR 10-51">XTR 10-51</option>
+                                <option value="XTR 10-45">XTR 10-45</option>
+                                <option value="Sram 10-42">Sram 10-42</option>
 
-            <div class="transmision_1">
-                <p>Elegí el plato y el piñon del caso N° 1</p>
-                <form action="">
-                    <div class="plato_1">
-                        <label for="input_plato_1">Plato:</label>
-                        <select name="plato_1" id="input_plato_1">
-                            <option value="28">28</option>
-                            <option value="30">30</option>
-                            <option value="32">32</option>
-                            <option value="34">34</option>
-                            <option value="36">36</option>
+                            </select>
+                        </div>
+                    
+                        <button class="boton" type="button" onclick="onclick_desarrollo_1()">Calcular desarrollo</button>
 
-                        </select>
-                    </div>
-                    <div class="piñon_1">
-                        <label for="input_piñon_1">Piñon:</label>
-                        <select name="piñon_1" id="input_piñon_1">
-                            <option value="XX1 10-50">XX1 10-50</option>
-                            <option value="XX1 10-52">XX1 10-52</option>
-                            <option value="XTR 10-51">XTR 10-51</option>
-                            <option value="XTR 10-45">XTR 10-45</option>
-                            <option value="Sram 10-42">Sram 10-42</option>
+                        <p id="desarrollo_resultado_1"></p>
+                        <p id="rango_1"></p>
+                    </form>
+                </div>
 
-                        </select>
-                    </div>
-                
-                <button class="boton" type="button" onclick="onclick_desarrollo_1()">Calcular desarrollo</button>
+                <div class="transmision_2">
+                    <p>Elegí el plato y el piñon del caso N° 2</p>
+                    <form action="" class="formul">
+                        <div class="plato_2">
+                            <label for="input_plato_2">Plato:</label>
+                            <select name="plato_2" class="select" id="input_plato_2">
+                                <option value="28">28</option>
+                                <option value="30">30</option>
+                                <option value="32">32</option>
+                                <option value="34">34</option>
+                                <option value="36">36</option>
+                            </select>
+                        </div>
+                        <div class="piñon_2">
+                            <label for="input_piñon_2">Piñon:</label>
+                            <select name="piñon_2" class="select" id="input_piñon_2">
+                                <option value="XX1 10-50">XX1 10-50</option>
+                                <option value="XX1 10-52">XX1 10-52</option>
+                                <option value="XTR 10-51">XTR 10-51</option>
+                                <option value="XTR 10-45">XTR 10-45</option>
+                                <option value="Sram 10-42">Sram 10-42</option>
+                            </select>
+                        </div>
+                    
+                    <button class="boton" type="button" onclick="onclick_desarrollo_2()">Calcular desarrollo</button>
 
-                <p id="desarrollo_resultado_1"></p>
-                <p id="rango_1"></p>
-
-                </form>
-            </div>
-
-            <div class="transmision_2">
-                <p>Elegí el plato y el piñon del caso N° 2</p>
-                <form action="">
-                    <div class="plato_2">
-                        <label for="input_plato_2">Plato:</label>
-                        <select name="plato_2" id="input_plato_2">
-                            <option value="28">28</option>
-                            <option value="30">30</option>
-                            <option value="32">32</option>
-                            <option value="34">34</option>
-                            <option value="36">36</option>
-                        </select>
-                    </div>
-                    <div class="piñon_2">
-                        <label for="input_piñon_2">Piñon:</label>
-                        <select name="piñon_2" id="input_piñon_2">
-                            <option value="XX1 10-50">XX1 10-50</option>
-                            <option value="XX1 10-52">XX1 10-52</option>
-                            <option value="XTR 10-51">XTR 10-51</option>
-                            <option value="XTR 10-45">XTR 10-45</option>
-                            <option value="Sram 10-42">Sram 10-42</option>
-                        </select>
-                    </div>
-                
-                <button class="boton" type="button" onclick="onclick_desarrollo_2()">Calcular desarrollo</button>
-
-                <p id="desarrollo_resultado_2"></p>
-                <p id="rango_2"></p>
-                </form>
+                    <p id="desarrollo_resultado_2"></p>
+                    <p id="rango_2"></p>
+    
+                    </form>
+                </div>
             </div>
         </section>
         <script src="./transmisiones.js"></script>
